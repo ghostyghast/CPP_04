@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
-# include "Animal.hpp"
+#ifndef WrongCAT_HPP
+# define WrongCAT_HPP
+# include "WrongAnimal.hpp"
 
 class WrongCat: public WrongAnimal{
     public:

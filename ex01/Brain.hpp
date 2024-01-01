@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/01 16:27:48 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 19:24:54 by amaligno         ###   ########.fr       */
+/*   Created: 2024/01/01 19:00:18 by amaligno          #+#    #+#             */
+/*   Updated: 2024/01/01 19:10:18 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
-# include "Animal.hpp"
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
+#include <string>
 
-class Cat: public Animal{
-    public:
-        //Constructor
-            Cat();
-        //Destructor
-            ~Cat();
-        void    makeSound(void) const;
+class Brain
+{
+private:
+	std::string	ideas[100];
+public:
+	Brain();
+	~Brain();
 };
 
 #endif

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:36:08 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 18:37:25 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/01 19:42:10 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
-#include "WrongCat.hpp"
+#include "Cat.hpp"
 #include <iostream>
 using std::cout;
 
-WrongCat::WrongCat()
+Cat::Cat()
 {
-    this->Type = "WrongCat";
+    this->Type = "Cat";
+	this->_brain = new Brain();
     cout << this->Type << " constructor called" << '\n';
 }
 
-WrongCat::~WrongCat()
+Cat::Cat(Cat const &cpy)
 {
+	*this = cpy;
+}
+
+Cat::~Cat()
+{
+	delete this->_brain;
     cout << this->Type << " destructor Called" << '\n';
 }
 
-void   WrongCat::makeSound(void) const
+void   Cat::makeSound(void) const
 {
-    cout << "hello human : - ) i am Wrongcat" << '\n';
+    cout << "Meow" << '\n';
 }
-
-#endif 

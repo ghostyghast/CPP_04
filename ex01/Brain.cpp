@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/01 16:27:48 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 19:24:54 by amaligno         ###   ########.fr       */
+/*   Created: 2024/01/01 19:00:20 by amaligno          #+#    #+#             */
+/*   Updated: 2024/01/01 19:22:46 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
-# include "Animal.hpp"
+#include "Brain.hpp"
+#include <iostream>
+using std::cout;
 
-class Cat: public Animal{
-    public:
-        //Constructor
-            Cat();
-        //Destructor
-            ~Cat();
-        void    makeSound(void) const;
-};
+Brain::Brain()
+{
+	cout << "Brain constructor has been called, good for you, you've needed one for a while" << '\n';
+}
 
-#endif
+Brain::~Brain()
+{
+	cout << "Brain destructor has been called, welp back to the status quo" << '\n';
+}
