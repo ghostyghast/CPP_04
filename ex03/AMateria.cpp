@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 20:28:15 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 21:57:24 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 01:17:20 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #include <iostream>
 using std::string;
 using std::cout;
+
+AMateria::AMateria(void)
+{
+	this->_type = "None";
+}
 
 AMateria::AMateria(string const &type)
 {

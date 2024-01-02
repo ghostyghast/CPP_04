@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:05:32 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 21:57:12 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 01:20:29 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class AMateria
 		std::string	_type;
 	public:
 		//Constructors
+			AMateria();
 			AMateria(std::string const & type);
 			AMateria(AMateria const &cpy);
 		//Getter

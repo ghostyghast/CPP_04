@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:04:01 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 19:59:15 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 01:44:13 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Character.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 int main()
 {
