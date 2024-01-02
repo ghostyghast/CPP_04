@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:27:48 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 19:55:11 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/02 16:24:44 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,9 @@ class Cat: public Animal{
         //Destructor
             ~Cat();
 		//Getter
-			Brain	&getBrain() const;
-        void    makeSound(void) const;
+			const Brain	&getBrain() const;
+        //Methods
+			void    makeSound(void) const;
 };
 
 #endif

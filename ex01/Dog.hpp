@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:29:14 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 19:28:26 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/02 16:23:35 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ class Dog: public Animal{
             Dog(Dog const &cpy);
         //Destructor
             ~Dog();
-        void    makeSound(void) const;
+		//Methods
+			const Brain	&getBrain(void) const;
+        	void    	makeSound(void) const;
 };
 
 #endif

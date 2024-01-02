@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:36:08 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 19:42:10 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/02 16:20:21 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ Cat::Cat()
 Cat::Cat(Cat const &cpy)
 {
 	*this = cpy;
+    this->_brain = new Brain(cpy.getBrain());
+    cout << "Cat copy constructor called";
 }
 
 Cat::~Cat()
@@ -47,4 +49,9 @@ Cat::~Cat()
 void   Cat::makeSound(void) const
 {
     cout << "Meow" << '\n';
+}
+
+const Brain		&Cat::getBrain(void) const
+{
+	return (*this->_brain);
 }
