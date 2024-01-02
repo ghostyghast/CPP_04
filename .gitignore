@@ -1,3 +1,5 @@
 *.o
 polymorphism
 .vscode
+a.out
+test.cpp
