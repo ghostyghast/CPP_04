@@ -1,0 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/01 16:36:08 by amaligno          #+#    #+#             */
+/*   Updated: 2024/01/02 16:20:21 by amaligno         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/01 16:26:29 by amaligno          #+#    #+#             */
+/*   Updated: 2024/01/01 16:35:53 by amaligno         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cat.hpp"
+#include <iostream>
+using std::cout;
+
+Cat::Cat()
+{
+    this->Type = "Cat";
+	this->_brain = new Brain();
+    cout << this->Type << " constructor called" << '\n';
+}
+
+Cat::Cat(Cat const &cpy)
+{
+	*this = cpy;
+    this->_brain = new Brain(cpy.getBrain());
+    cout << "Cat copy constructor called";
+}
+
+Cat::~Cat()
+{
+	delete this->_brain;
+    cout << this->Type << " destructor Called" << '\n';
+}
+
+void   Cat::makeSound(void) const
+{
+    cout << "Meow" << '\n';
+}
+
+const Brain		&Cat::getBrain(void) const
+{
+	return (*this->_brain);
+}
