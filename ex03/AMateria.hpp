@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:05:32 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 01:20:29 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:32:40 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 # include "ICharacter.hpp"
+
+class	ICharacter;
 
 class AMateria
 {

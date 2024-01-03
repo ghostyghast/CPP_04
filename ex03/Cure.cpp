@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:23:54 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 01:25:20 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 15:48:27 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,19 @@
 using std::string;
 using std::cout;
 
-Cure::Cure(): AMateria("Cure")
+Cure::Cure(): AMateria("cure")
 {
+	cout << "Cure constructor called" << '\n';
 }
 
 Cure::Cure(AMateria const &cpy): AMateria(cpy)
 {
+	cout << "Cure copy constructor called" << '\n';
 }
 
 Cure::~Cure(void)
 {
+	cout << "Cure destructor called" << '\n';
 }
 
 AMateria	*Cure::clone(void) const

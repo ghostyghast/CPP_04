@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 20:30:21 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 01:41:04 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:57:17 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Character::Character(std::string name)
 {
 	this->_name = name;
 	for (int i = 0; i < 4; i++)
-		this->_inventory[0] = NULL;
+		this->_inventory[i] = NULL;
 	cout << "Concrete character constructor called" << '\n';
 }
 
@@ -47,7 +47,7 @@ void	Character::equip(AMateria *m)
 
 void	Character::unequip(int idx)
 {
-	if (this->_inventory[idx] && (idx < 0 || idx >= 4))
+	if (this->_inventory[idx] && (idx >= 0 && idx < 4))
 		this->_inventory[idx] = NULL;
 }
 

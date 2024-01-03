@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:03:12 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 01:22:23 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 15:46:41 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,17 @@ using std::cout;
 
 Ice::Ice(): AMateria("ice")
 {
+	cout << "Ice constructor called" << '\n';
 }
 
 Ice::Ice(AMateria const &cpy): AMateria(cpy)
 {
+	cout << "Ice copy constructor called" << '\n';
 }
 
 Ice::~Ice(void)
 {
+	cout << "Ice destructor called" << '\n';
 }
 
 AMateria	*Ice::clone(void) const
@@ -34,5 +37,5 @@ AMateria	*Ice::clone(void) const
 
 void		Ice::use(ICharacter &target)
 {
-	cout << "*Shoots an ice bolt at " << target.getName() << " *\n";
+	cout << "* Shoots an ice bolt at " << target.getName() << " *\n";
 }

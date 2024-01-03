@@ -3,19 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:04:01 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 01:44:13 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 16:14:00 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Character.hpp"
 #include "MateriaSource.hpp"
+#include "Character.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include <iostream>
+using std::cout;
 
-int main()
+void	test1()
 {
 	IMateriaSource* src = new MateriaSource();
 	src->learnMateria(new Ice());
@@ -32,5 +34,14 @@ int main()
 	delete bob;
 	delete me;
 	delete src;
-	return 0;
+}
+
+void	test2()
+{
+	
+}
+
+int main()
+{
+	test1();
 }

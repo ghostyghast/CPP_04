@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 20:24:58 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 01:59:38 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/03 14:32:07 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define ICHARACTER_HPP
 # include <string>
 # include "AMateria.hpp"
+
+class AMateria;
+
 class ICharacter
 {
 	public:
