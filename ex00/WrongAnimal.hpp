@@ -18,15 +18,19 @@ class   WrongAnimal{
 	protected:
         std::string	Type;
 	public:
-		//Constructor
+		//Constructors
 			WrongAnimal();
+			WrongAnimal(WrongAnimal &cpy);
 		//Destructor
 			virtual	~WrongAnimal();
+		//Operator overloads
+			WrongAnimal	&operator=(WrongAnimal const &cpy);
 		//Getter
 			std::string getType(void) const;
 		//Setter
 			void        setType(std::string Type);
-		void    makeSound(void) const;
+		//Methods
+			void    makeSound(void) const;
 };
 
 #endif

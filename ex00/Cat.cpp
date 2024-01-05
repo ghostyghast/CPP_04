@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:36:08 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 18:13:23 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 16:55:36 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,11 @@ Cat::Cat()
     cout << this->Type << " constructor called" << '\n';
 }
 
+Cat::Cat(Cat &cpy)
+{
+	*this = cpy;
+}
+
 Cat::~Cat()
 {
     cout << this->Type << " destructor Called" << '\n';
@@ -40,4 +45,11 @@ Cat::~Cat()
 void   Cat::makeSound(void) const
 {
     cout << "Meow" << '\n';
+}
+
+Cat	&Cat::operator=(Cat const &cpy)
+{
+	if (this != &cpy)
+		this->Type = cpy.getType();
+	return *this;
 }

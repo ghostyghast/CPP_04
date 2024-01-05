@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:24:18 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 01:24:32 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 20:09:12 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Cure: public AMateria
 		//Constructors 
 			Cure();
 			Cure(AMateria const &cpy);
+		//Operator overload
+			Cure	&operator=(Cure const &cpy);
 		//Destructor
 			~Cure(void);
 		//Methods

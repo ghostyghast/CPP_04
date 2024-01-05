@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:36:08 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 16:20:21 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:41:12 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ Cat::Cat()
 
 Cat::Cat(Cat const &cpy)
 {
-	*this = cpy;
     this->_brain = new Brain(cpy.getBrain());
     cout << "Cat copy constructor called";
 }
@@ -54,4 +53,16 @@ void   Cat::makeSound(void) const
 const Brain		&Cat::getBrain(void) const
 {
 	return (*this->_brain);
+}
+
+Cat	&Cat::operator=(Cat const &cpy)
+{
+	if (this != &cpy)
+	{
+		this->Type = cpy.getType();
+	
+		delete this->_brain;
+    	this->_brain = new Brain(cpy.getBrain());
+	}
+	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:27:48 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 16:24:44 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 16:53:37 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class Cat: public Animal{
 			const Brain	&getBrain() const;
         //Methods
 			void    makeSound(void) const;
+		//Operator overloads
+			Cat		&operator=(Cat const &cpy);
 };
 
 #endif

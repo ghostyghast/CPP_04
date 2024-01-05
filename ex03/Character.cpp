@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 20:30:21 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 14:57:17 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 21:07:37 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,20 @@ Character::Character(std::string name)
 
 Character::~Character()
 {
+	for (int i = 0; i < 4; i++)
+		if (this->_inventory[i])
+			delete this->_inventory[i];
 	cout << "Concrete character destructor called" << '\n';
 }
 
 const string	&Character::getName(void) const
 {
 	return (this->_name);
+}
+
+AMateria	*Character::getFloor(void) const
+{
+	return (this->_floor);
 }
 
 void	Character::equip(AMateria *m)
@@ -47,13 +55,16 @@ void	Character::equip(AMateria *m)
 
 void	Character::unequip(int idx)
 {
-	if (this->_inventory[idx] && (idx >= 0 && idx < 4))
+	if ((idx >= 0 && idx < 4) && this->_inventory[idx])
+	{
+		this->_floor = this->_inventory[idx];
 		this->_inventory[idx] = NULL;
+	}
 }
 
 void	Character::use(int idx, ICharacter &target)
 {
-	if (!this->_inventory[idx])
+	if ((idx < 0 || idx >= 4) || !this->_inventory[idx])
 		return ;
 	this->_inventory[idx]->use(target);
 }

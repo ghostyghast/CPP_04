@@ -20,6 +20,12 @@ WrongAnimal::WrongAnimal(): Type("None")
     cout << "WrongAnimal Constructor Called" << '\n';
 }
 
+WrongAnimal::WrongAnimal(WrongAnimal &cpy)
+{
+	*this = cpy;
+}
+
+
 WrongAnimal::~WrongAnimal()
 {
     cout << "WrongAnimal Destructor Called" << '\n';
@@ -37,5 +43,12 @@ void    WrongAnimal::setType(string Type)
 
 void	WrongAnimal::makeSound(void) const
 {
-	cout << "i am animal yes noise" << '\n';
+	cout << "i am animal yes" << '\n';
+}
+
+WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &cpy)
+{
+	if (this != &cpy)
+		this->Type = cpy.getType();
+	return *this;
 }

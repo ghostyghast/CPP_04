@@ -6,13 +6,13 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 19:00:18 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 16:17:37 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:57:30 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BRAIN_HPP
 # define BRAIN_HPP
-#include <string>
+# include <string>
 
 class Brain
 {
@@ -24,6 +24,8 @@ class Brain
 			Brain(Brain const &cpy);
 		//Destructor
 			~Brain();
+		//Operator overload
+			Brain	&operator=(Brain const &cpy);
 		//Getter
 			const std::string	*getIdeas(void) const;
 		//Methods

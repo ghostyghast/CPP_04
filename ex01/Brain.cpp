@@ -6,13 +6,14 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 19:00:20 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 17:21:29 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:39:31 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
 #include <iostream>
 using std::cout;
+using std::string;
 
 Brain::Brain()
 {
@@ -41,4 +42,14 @@ void	Brain::printBrain(void) const
 {
 	for(int i = 0; i < 100; i++)
 		cout << this->ideas[i] << '\n';
+}
+
+Brain	&Brain::operator=(Brain const &cpy)
+{
+	const string *cpy_ideas = cpy.getIdeas();
+
+	if (this != &cpy)
+		for (int i = 0; i < 100; i++)
+			this->ideas[i] = cpy_ideas[i];
+	return *this;
 }

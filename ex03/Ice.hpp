@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:03:17 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 01:57:49 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 20:04:54 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Ice: public AMateria
 		//Constructors 
 			Ice();
 			Ice(AMateria const &cpy);
+		//Operator overload
+			Ice	&operator=(Ice const &cpy);
 		//Destructor
 			~Ice(void);
 		//Methods

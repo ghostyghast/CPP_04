@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:26:29 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 17:32:35 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 18:00:13 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,19 @@ Dog::~Dog()
 {
 	delete this->_brain;
     cout << this->Type << " destructor Called" << '\n';
+}
+
+Dog	&Dog::operator=(Dog const &cpy)
+{
+	if (this != &cpy)
+	{
+		this->Type = cpy.getType();
+
+		delete this->_brain;
+		this->_brain = new Brain(cpy.getBrain());
+	}
+	
+	return *this;
 }
 
 void    Dog::makeSound(void) const

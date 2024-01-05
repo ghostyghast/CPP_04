@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:03:12 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 15:46:41 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 20:09:34 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ Ice::Ice(AMateria const &cpy): AMateria(cpy)
 Ice::~Ice(void)
 {
 	cout << "Ice destructor called" << '\n';
+}
+
+Ice	&Ice::operator=(Ice const &cpy)
+{
+	(void)cpy;
+	return (*this);
 }
 
 AMateria	*Ice::clone(void) const

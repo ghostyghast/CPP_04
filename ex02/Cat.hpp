@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:27:48 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 17:45:38 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 17:54:01 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Cat: public AAnimal{
 			Cat(Cat const &cpy);
         //Destructor
             ~Cat();
+		//Operator overloads
+			Cat	&operator=(Cat const &cpy);
 		//Getter
 			const Brain	&getBrain() const;
         //Methods

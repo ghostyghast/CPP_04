@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:36:08 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/02 16:20:21 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 18:00:00 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,19 @@ Cat::~Cat()
 {
 	delete this->_brain;
     cout << this->Type << " destructor Called" << '\n';
+}
+
+Cat	&Cat::operator=(Cat const &cpy)
+{
+	if (this != &cpy)
+	{
+		this->Type = cpy.getType();
+
+		delete this->_brain;
+		this->_brain = new Brain(cpy.getBrain());
+	}
+	
+	return *this;
 }
 
 void   Cat::makeSound(void) const

@@ -22,11 +22,14 @@ class   AAnimal{
 			AAnimal();
 		//Destructor
 			virtual	~AAnimal();
+		//Operator overloads
+			AAnimal	&operator=(AAnimal const &cpy);
 		//Getter
 			std::string getType(void) const;
 		//Setter
 			void        setType(std::string Type);
-		virtual void    makeSound(void) const = 0;
+		//Methods
+			virtual void    makeSound(void) const = 0;
 };
 
 #endif

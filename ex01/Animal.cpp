@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:23:42 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 17:37:06 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 16:49:24 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,11 @@ void    Animal::setType(string Type)
 void	Animal::makeSound(void) const
 {
 	cout << "Animal noise." << '\n';
+}
+
+Animal	&Animal::operator=(Animal const &cpy)
+{
+	if (this != &cpy)
+		this->Type = cpy.getType();
+	return *this;
 }

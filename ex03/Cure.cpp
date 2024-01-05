@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/03 01:23:54 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 15:48:27 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 20:08:26 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,12 @@ Cure::Cure(AMateria const &cpy): AMateria(cpy)
 Cure::~Cure(void)
 {
 	cout << "Cure destructor called" << '\n';
+}
+
+Cure	&Cure::operator=(Cure const &cpy)
+{
+	(void)cpy;
+	return *this;
 }
 
 AMateria	*Cure::clone(void) const

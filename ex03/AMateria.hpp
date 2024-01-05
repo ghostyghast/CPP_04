@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:05:32 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 14:32:40 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 20:10:26 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,10 @@ class AMateria
 			AMateria();
 			AMateria(std::string const & type);
 			AMateria(AMateria const &cpy);
+		//Destructor
+			virtual	~AMateria();
+		//Operator overload
+			AMateria	&operator=(AMateria const &cpy);
 		//Getter
 			std::string const & getType() const; //Returns the materia type
 		//Methods

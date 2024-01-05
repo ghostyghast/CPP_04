@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:19:19 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 18:53:26 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 16:31:15 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	test2()
 	const WrongAnimal* meta = new WrongAnimal();
 	const WrongAnimal* i = new WrongCat();
 	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
+	i->makeSound(); //Will not output the cat sound!
 	meta->makeSound();
 	
 	delete meta;

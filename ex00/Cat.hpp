@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amaligno <antoinemalignon@yahoo.com>       +#+  +:+       +#+        */
+/*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 16:27:48 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/01 19:24:54 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 16:56:28 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,13 @@ class Cat: public Animal{
     public:
         //Constructor
             Cat();
+			Cat(Cat &cpy);
         //Destructor
             ~Cat();
-        void    makeSound(void) const;
+		//Operator overloads
+			Cat		&operator=(Cat const &cpy);
+		//Methods
+        	void    makeSound(void) const;
 };
 
 #endif

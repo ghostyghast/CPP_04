@@ -6,7 +6,7 @@
 /*   By: amaligno <amaligno@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 21:24:58 by amaligno          #+#    #+#             */
-/*   Updated: 2024/01/03 14:57:42 by amaligno         ###   ########.fr       */
+/*   Updated: 2024/01/05 20:31:04 by amaligno         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ MateriaSource::MateriaSource()
 
 MateriaSource::~MateriaSource()
 {
+	for (int i = 0; i < 4; i++)
+		if (this->_knowledge[i])
+			delete this->_knowledge[i];
 	cout << "Materia destructor called" << '\n';	
 }
 
@@ -47,5 +50,5 @@ AMateria	*MateriaSource::createMateria(string const &type)
 			return (this->_knowledge[i]->clone());
 	}
 	cout << "Type unknown" << '\n';
-	return (0);	
+	return (NULL);	
 }

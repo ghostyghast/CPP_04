@@ -20,9 +20,21 @@ AAnimal::AAnimal(): Type("None")
     cout << "AAnimal Constructor Called" << '\n';
 }
 
+AAnimal::AAnimal(AAnimal const &cpy)
+{
+	*this = cpy;
+}
+
 AAnimal::~AAnimal()
 {
     cout << "AAnimal Destructor Called" << '\n';
+}
+
+AAnimal	&AAnimal::operator=(AAnimal const &cpy)
+{
+	if (this != &cpy)
+		*this = cpy;
+	return *this;
 }
 
 string  AAnimal::getType(void) const
